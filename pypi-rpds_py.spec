@@ -6,12 +6,12 @@
 # autospec commit: 5424026
 #
 Name     : pypi-rpds_py
-Version  : 0.22.1
-Release  : 8
-URL      : https://files.pythonhosted.org/packages/11/e8/9316e3d6edd0530ac284cee5c7ab1cd00acf020b68e08c051c91580d893e/rpds_py-0.22.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/11/e8/9316e3d6edd0530ac284cee5c7ab1cd00acf020b68e08c051c91580d893e/rpds_py-0.22.1.tar.gz
+Version  : 0.22.3
+Release  : 9
+URL      : https://files.pythonhosted.org/packages/01/80/cce854d0921ff2f0a9fa831ba3ad3c65cee3a46711addf39a2af52df2cfd/rpds_py-0.22.3.tar.gz
+Source0  : https://files.pythonhosted.org/packages/01/80/cce854d0921ff2f0a9fa831ba3ad3c65cee3a46711addf39a2af52df2cfd/rpds_py-0.22.3.tar.gz
 Source1  : http://localhost/cgit/vendor/pypi-rpds_py/snapshot/pypi-rpds_py-2024-07-24-18-44-10.tar.xz
-Source2  : http://localhost/cgit/vendor/pypi-rpds_py/snapshot/pypi-rpds_py-2024-12-04-14-57-22.tar.gz
+Source2  : http://localhost/cgit/vendor/pypi-rpds_py/snapshot/pypi-rpds_py-2024-12-05-11-06-05.tar.gz
 Summary  : Python bindings to Rust's persistent data structures (rpds)
 Group    : Development/Tools
 License  : Apache-2.0 MIT MPL-2.0-no-copyleft-exception Unicode-DFS-2016
@@ -62,16 +62,16 @@ python3 components for the pypi-rpds_py package.
 
 
 %prep
-%setup -q -n rpds_py-0.22.1
+%setup -q -n rpds_py-0.22.3
 cd %{_builddir}
 tar xf %{_sourcedir}/pypi-rpds_py-2024-07-24-18-44-10.tar.xz
 cd %{_builddir}
-tar xf %{_sourcedir}/pypi-rpds_py-2024-12-04-14-57-22.tar.gz
-cd %{_builddir}/rpds_py-0.22.1
+tar xf %{_sourcedir}/pypi-rpds_py-2024-12-05-11-06-05.tar.gz
+cd %{_builddir}/rpds_py-0.22.3
 mkdir -p ./vendor
-cp -r %{_builddir}/pypi-rpds_py-2024-07-24-18-44-10/* %{_builddir}/rpds_py-0.22.1/./vendor
+cp -r %{_builddir}/pypi-rpds_py-2024-07-24-18-44-10/* %{_builddir}/rpds_py-0.22.3/./vendor
 mkdir -p ./vendor
-cp -r %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/* %{_builddir}/rpds_py-0.22.1/./vendor
+cp -r %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/* %{_builddir}/rpds_py-0.22.3/./vendor
 mkdir -p .cargo
 echo '[source.crates-io]
 replace-with = "vendored-sources"
@@ -136,46 +136,46 @@ cp %{_builddir}/pypi-rpds_py-2024-07-24-18-44-10/unicode-ident/LICENSE-MIT %{bui
 cp %{_builddir}/pypi-rpds_py-2024-07-24-18-44-10/unicode-ident/LICENSE-UNICODE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/583a5eebcf6119730bd96922e8a0faecf7faf720 || :
 cp %{_builddir}/pypi-rpds_py-2024-07-24-18-44-10/unindent/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/6e5c4711bcae04967d7f5b5e01cf56ae03bebe7a || :
 cp %{_builddir}/pypi-rpds_py-2024-07-24-18-44-10/unindent/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ce3a2603094e799f42ce99c40941544dfcc5c4a5 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/archery/LICENSE.md %{buildroot}/usr/share/package-licenses/pypi-rpds_py/7c1853ff34974a6b19247c039a0f60e06438f877 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/autocfg/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/5798832c31663cedc1618d18544d445da0295229 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/autocfg/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/e6d32072ef5f584a805b429ecbd4eec428316dde || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/cc/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/5798832c31663cedc1618d18544d445da0295229 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/cc/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/3b042d3d971924ec0296687efd50dbe08b734976 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/cfg-if/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/5798832c31663cedc1618d18544d445da0295229 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/cfg-if/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/3b042d3d971924ec0296687efd50dbe08b734976 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/heck/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/5798832c31663cedc1618d18544d445da0295229 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/heck/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/60c3522081bf15d7ac1d4c5a63de425ef253e87a || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/indoc/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/6e5c4711bcae04967d7f5b5e01cf56ae03bebe7a || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/indoc/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ce3a2603094e799f42ce99c40941544dfcc5c4a5 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/libc/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/6e5c4711bcae04967d7f5b5e01cf56ae03bebe7a || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/libc/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/36d69bcb88153a640740000efe933b009420ce7e || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/memoffset/LICENSE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/02bf11a87b9bbacedf2fcf4856af3b933faef82e || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/once_cell/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/5798832c31663cedc1618d18544d445da0295229 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/once_cell/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ce3a2603094e799f42ce99c40941544dfcc5c4a5 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/portable-atomic/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/598f87f072f66e2269dd6919292b2934dbb20492 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/portable-atomic/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ce3a2603094e799f42ce99c40941544dfcc5c4a5 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/proc-macro2/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/6e5c4711bcae04967d7f5b5e01cf56ae03bebe7a || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/proc-macro2/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ce3a2603094e799f42ce99c40941544dfcc5c4a5 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/pyo3-build-config/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/959ce149b1615b8bff3437f59282396756987859 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/pyo3-ffi/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/959ce149b1615b8bff3437f59282396756987859 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/pyo3-macros-backend/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/959ce149b1615b8bff3437f59282396756987859 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/pyo3-macros/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/959ce149b1615b8bff3437f59282396756987859 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/pyo3/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/959ce149b1615b8bff3437f59282396756987859 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/pyo3/pyo3-runtime/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/959ce149b1615b8bff3437f59282396756987859 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/python3-dll-a/LICENSE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/dc343e169fac680f93f90bc6cc63ca0c7a460131 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/quote/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/6e5c4711bcae04967d7f5b5e01cf56ae03bebe7a || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/quote/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ce3a2603094e799f42ce99c40941544dfcc5c4a5 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/rpds/LICENSE.md %{buildroot}/usr/share/package-licenses/pypi-rpds_py/7c1853ff34974a6b19247c039a0f60e06438f877 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/syn/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/6e5c4711bcae04967d7f5b5e01cf56ae03bebe7a || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/syn/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ce3a2603094e799f42ce99c40941544dfcc5c4a5 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/target-lexicon/LICENSE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/f137043e018f2024e0414a9153ea728c203ae8e5 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/triomphe/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ae484c13220b7cddf135943ef6f89587ff728ef4 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/triomphe/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/b12c210e78112e40e89cc0e765a6335c6b4636b2 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/unicode-ident/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/6e5c4711bcae04967d7f5b5e01cf56ae03bebe7a || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/unicode-ident/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ce3a2603094e799f42ce99c40941544dfcc5c4a5 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/unicode-ident/LICENSE-UNICODE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/583a5eebcf6119730bd96922e8a0faecf7faf720 || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/unindent/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/6e5c4711bcae04967d7f5b5e01cf56ae03bebe7a || :
-cp %{_builddir}/pypi-rpds_py-2024-12-04-14-57-22/unindent/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ce3a2603094e799f42ce99c40941544dfcc5c4a5 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/archery/LICENSE.md %{buildroot}/usr/share/package-licenses/pypi-rpds_py/7c1853ff34974a6b19247c039a0f60e06438f877 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/autocfg/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/5798832c31663cedc1618d18544d445da0295229 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/autocfg/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/e6d32072ef5f584a805b429ecbd4eec428316dde || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/cc/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/5798832c31663cedc1618d18544d445da0295229 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/cc/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/3b042d3d971924ec0296687efd50dbe08b734976 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/cfg-if/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/5798832c31663cedc1618d18544d445da0295229 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/cfg-if/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/3b042d3d971924ec0296687efd50dbe08b734976 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/heck/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/5798832c31663cedc1618d18544d445da0295229 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/heck/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/60c3522081bf15d7ac1d4c5a63de425ef253e87a || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/indoc/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/6e5c4711bcae04967d7f5b5e01cf56ae03bebe7a || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/indoc/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ce3a2603094e799f42ce99c40941544dfcc5c4a5 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/libc/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/6e5c4711bcae04967d7f5b5e01cf56ae03bebe7a || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/libc/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/36d69bcb88153a640740000efe933b009420ce7e || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/memoffset/LICENSE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/02bf11a87b9bbacedf2fcf4856af3b933faef82e || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/once_cell/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/5798832c31663cedc1618d18544d445da0295229 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/once_cell/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ce3a2603094e799f42ce99c40941544dfcc5c4a5 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/portable-atomic/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/598f87f072f66e2269dd6919292b2934dbb20492 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/portable-atomic/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ce3a2603094e799f42ce99c40941544dfcc5c4a5 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/proc-macro2/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/6e5c4711bcae04967d7f5b5e01cf56ae03bebe7a || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/proc-macro2/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ce3a2603094e799f42ce99c40941544dfcc5c4a5 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/pyo3-build-config/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/959ce149b1615b8bff3437f59282396756987859 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/pyo3-ffi/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/959ce149b1615b8bff3437f59282396756987859 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/pyo3-macros-backend/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/959ce149b1615b8bff3437f59282396756987859 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/pyo3-macros/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/959ce149b1615b8bff3437f59282396756987859 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/pyo3/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/959ce149b1615b8bff3437f59282396756987859 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/pyo3/pyo3-runtime/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/959ce149b1615b8bff3437f59282396756987859 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/python3-dll-a/LICENSE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/dc343e169fac680f93f90bc6cc63ca0c7a460131 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/quote/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/6e5c4711bcae04967d7f5b5e01cf56ae03bebe7a || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/quote/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ce3a2603094e799f42ce99c40941544dfcc5c4a5 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/rpds/LICENSE.md %{buildroot}/usr/share/package-licenses/pypi-rpds_py/7c1853ff34974a6b19247c039a0f60e06438f877 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/syn/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/6e5c4711bcae04967d7f5b5e01cf56ae03bebe7a || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/syn/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ce3a2603094e799f42ce99c40941544dfcc5c4a5 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/target-lexicon/LICENSE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/f137043e018f2024e0414a9153ea728c203ae8e5 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/triomphe/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ae484c13220b7cddf135943ef6f89587ff728ef4 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/triomphe/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/b12c210e78112e40e89cc0e765a6335c6b4636b2 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/unicode-ident/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/6e5c4711bcae04967d7f5b5e01cf56ae03bebe7a || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/unicode-ident/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ce3a2603094e799f42ce99c40941544dfcc5c4a5 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/unicode-ident/LICENSE-UNICODE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/583a5eebcf6119730bd96922e8a0faecf7faf720 || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/unindent/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/6e5c4711bcae04967d7f5b5e01cf56ae03bebe7a || :
+cp %{_builddir}/pypi-rpds_py-2024-12-05-11-06-05/unindent/LICENSE-MIT %{buildroot}/usr/share/package-licenses/pypi-rpds_py/ce3a2603094e799f42ce99c40941544dfcc5c4a5 || :
 cp %{_builddir}/rpds_py-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-rpds_py/30a3d7eda1e8880325b611de40e44026ed5866ea || :
 pip install --root=%{buildroot} --no-deps --ignore-installed dist/*.whl
 
