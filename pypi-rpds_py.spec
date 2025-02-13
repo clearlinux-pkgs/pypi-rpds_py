@@ -7,7 +7,7 @@
 #
 Name     : pypi-rpds_py
 Version  : 0.22.3
-Release  : 10
+Release  : 11
 URL      : https://files.pythonhosted.org/packages/01/80/cce854d0921ff2f0a9fa831ba3ad3c65cee3a46711addf39a2af52df2cfd/rpds_py-0.22.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/01/80/cce854d0921ff2f0a9fa831ba3ad3c65cee3a46711addf39a2af52df2cfd/rpds_py-0.22.3.tar.gz
 Source1  : http://localhost/cgit/vendor/pypi-rpds_py/snapshot/pypi-rpds_py-2024-07-24-18-44-10.tar.xz
